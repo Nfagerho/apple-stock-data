@@ -13,7 +13,7 @@ class App {
     this.app.use(bodyParser.json());
 
 
-    require('./api/routes/stockRoutes')(this.app);
+    require('./app/routes/stockRoutes')(this.app);
 
     if (process.env.NODE_ENV === 'production') {
       this.app.use(express.static('front/build'));
